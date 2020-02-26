@@ -1,0 +1,96 @@
+/* Imports and other stuff */
+@import 'fonts.css';
+@import 'reset.css';
+@import 'animations.css';
+
+body {
+    font-family: 'LunchType-Regular', sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.section {
+    min-height: 100vh;
+    display: flex;
+    position: relative;
+}
+
+/* Helper class that adds padding to our sections and can be re-used */
+.section-pad {
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+.container {
+    max-width: 810px;
+    margin: auto;
+}
+
+.intro {
+    background-image: url('intro.jpg');
+}
+
+.intro p {
+    font-size: 36px;
+    line-height: 1.2;
+    color: #fff;
+}
+
+.logo {
+    display: block;
+    text-align: center;
+    margin-bottom: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 112px;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.bg-cover {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.appear {
+/* Set opacity as starting point */
+    opacity: 0;
+    animation: fadeIn 2.5s forwards ease-out;
+    /*animation-duration: 5s;
+    animation-delay: 0s;*/
+/* Tells it to stay on final frame of animation i.e. end-state stays the same */
+    /*animation-fill-mode: forwards;*/
+}
+
+.marquee {
+    font-family: 'LunchType-Medium', sans-serif;
+    color: #ff0;
+    position: absolute;
+    top: 3vh;
+    left: 0;
+    width: 100%;
+/* Each letter will be 5% of the viewport width (vw) */
+    font-size: 5vw;
+    line-height: 1;
+/* Will stop the long text from causing scroll bars by handing outside of the marquee box area */
+    overflow: hidden;
+}
+
+.marquee span {
+/* This is the shorthand brief version of animation syntax css rule*/
+    animation: moveLeft 200s infinite linear;
+/* Ensures that the text stays on one line */
+    white-space: nowrap;
+/* Our span is inline by default, here we tell it to be block */
+    display: block;
+/* This will let us add our animation */
+    position: relative;
+}
+
+.mix-difference {
+/* Our mix blend mode allows us to mix the current layer's style colours with that of what's behind it to create cool effects */
+    mix-blend-mode: difference;
+}
