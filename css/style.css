@@ -2,6 +2,7 @@
 @import 'fonts.css';
 @import 'reset.css';
 @import 'animations.css';
+@import 'shapes.css';
 
 body {
     font-family: 'LunchType-Regular', sans-serif;
@@ -93,4 +94,49 @@ body {
 .mix-difference {
 /* Our mix blend mode allows us to mix the current layer's style colours with that of what's behind it to create cool effects */
     mix-blend-mode: difference;
+}
+
+.day-1 {
+    background-color: #fd76a7;
+}
+
+.day-2 {
+    background-color: #1bb190;
+}
+
+.day-3 {
+    background-image: url('../img/day-3.jpg');
+}
+
+.day {
+/* So the shapes position in relation to the day sections */
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+
+.day .container {
+/* This will force our content to display on top of our shapes */
+    position: relative;
+    z-index: 51;
+}
+
+.date {
+    font-family:'LunchType-Medium', sans-serif;
+    font-size: 28px;
+    color: #ffeecf;
+    margin-bottom: 48px;
+    line-height: 1;
+}
+
+.lineup h2 {
+    font-family:'LunchType-Medium', sans-serif;
+    font-size: 56px;
+    line-height: 1;
+    margin-bottom: 6px;
+}
+
+.lineup p {
+    font-size: 21px;
+    margin-bottom: 26px;
 }

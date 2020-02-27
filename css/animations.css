@@ -19,3 +19,25 @@
         transform: translateX(-3000vw);
     }
 }
+
+@keyframes shapemove {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+@keyframes squigglemove {
+    /*0% { transform: rotate(0deg); }*/
+    25% { transform: rotate(90deg); }
+    /*50% { transform: rotate(135deg); }*/
+    75% { transform: rotate(135deg); }
+    /*100% { transform: rotate(0deg); }*/
+}
+
+@keyframes squigglemovereversed {
+    /*0% { transform: rotate(0deg); }*/
+    25% { transform: rotate(45deg); }
+    /*50% { transform: rotate(315deg); }*/
+    75% { transform: rotate(90deg); }
+    /*100% { transform: rotate(0deg); }*/
+}
