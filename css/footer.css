@@ -1,0 +1,36 @@
+.flex-column {
+    flex-direction: column;
+}
+
+.register {
+    min-height: 65vh;
+    background-color: #ffeed1;
+    display: flex;
+}
+
+.register h2 {
+    font-family:'LunchType-Medium', sans-serif;
+}
+
+.footer {
+    min-height: 35vh;
+    background-color: #111118;
+    display: flex;
+    text-align: center;
+}
+
+.button {
+    border: 2px #ffeed1 solid;
+    color: #ffeed1;
+    line-height: 1;
+    padding: 6px 12px;
+    min-width: 120px;
+    text-align: center;
+    font-family: 'LunchType-Medium', sans-serif;
+    text-decoration: none;
+}
+
+.footer img {
+    max-width: 87px;
+    margin-bottom: 24px;
+}

@@ -3,11 +3,18 @@
 @import 'reset.css';
 @import 'animations.css';
 @import 'shapes.css';
+@import 'viewport.css';
+@import 'footer.css';
 
 body {
     font-family: 'LunchType-Regular', sans-serif;
     font-size: 18px;
     line-height: 1.5;
+}
+
+*::selection {
+    background-color: #90F;
+    /*mix-blend-mode: color-dodge;*/
 }
 
 .section {
@@ -139,4 +146,29 @@ body {
 .lineup p {
     font-size: 21px;
     margin-bottom: 26px;
+}
+
+.scroll-to {
+    position: absolute;
+    left: 50%;
+    bottom: 3vh;
+    transform: translateX(-50%);
+
+    width: 64px;
+    height: 32px;
+
+    background-image: url('../img/down-arrow.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    mix-blend-mode: overlay;
+
+    animation: arrowDown 2s infinite ease-out;
+}
+
+.scroll-to-intro {
+    background-image: url('../img/down-arrow-light.svg');
+
+    mix-blend-mode: color-dodge;
 }
