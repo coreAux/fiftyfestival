@@ -44,6 +44,6 @@
 
 @keyframes arrowDown {
     0% { transform: translate(-50%, 0px); }
-    50% { transform: translate(-50%, -10px); }
+    50% { transform: translate(-50%, -5vh); }
     100% { transform: translate(-50%, 0px); }
 }
