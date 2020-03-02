@@ -20,7 +20,7 @@ const circles = document.querySelectorAll('.circle');
 
 circles.forEach((circle, index) => {
 // In here we get access to each circle
-    circle.style.animation = 'shapemove 20s infinite linear';
+    circle.style.animation = 'shapemove 60s infinite linear';
 
 // Just to avoid infinitys add 1 to the index so no divide by zero
     index += 1;
@@ -102,12 +102,13 @@ inView('.section')
     .on('enter', section => {
         section.classList.add('in-viewport')
     })
-    .on('exit', section => {
-        section.classList.remove('in-viewport')
-    })
+// Enable below code for the section to vanish when user scrolls out of the section
+//    .on('exit', section => {
+//        section.classList.remove('in-viewport')
+//    })
 
 // Here we set the class only to add once we have scrolled .2 of our section into the viewport
-inView.threshold(0.2);
+inView.threshold(0.5);
 
 
 // 1. Select all of our sections and loop through them
@@ -136,7 +137,7 @@ sections.forEach((section, index) => {
 })
 
 
-// 1. Whenver we click a js-scroll link we want to run a function
+// 1. Whenever we click a js-scroll link we want to run a function
 
 const scrollLinks = document.querySelectorAll('.js-scroll')
 
