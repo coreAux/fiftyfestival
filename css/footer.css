@@ -6,10 +6,50 @@
     min-height: 65vh;
     background-color: #ffeed1;
     display: flex;
+    flex-direction: row;
 }
 
 .register h2 {
     font-family:'LunchType-Medium', sans-serif;
+    font-size: 40px;
+    margin-bottom: 48px;
+    line-height: 1.1;
+}
+
+.register .container {
+    display: flex;
+}
+
+.sign-up {
+    display: flex;
+    border-bottom: 2px solid #00b290;
+    padding-bottom: 12px;
+}
+
+input {
+    background: none;
+    border: none;
+    font-size: 21px;
+}
+
+.email-input {
+    flex: 1;
+    border-radius: 30px;
+    padding: 0 8px;
+    font-weight: bold;
+    color: #90f;
+}
+
+.submit {
+    font-family: 'LunchType-Medium', sans-serif;
+}
+
+.submit:active {
+    color: #90f;
+}
+
+.form {
+    margin: 48px 24px;
 }
 
 .footer {
@@ -33,4 +73,40 @@
 .footer img {
     max-width: 87px;
     margin-bottom: 24px;
+}
+
+.eyes {
+    width: 108px;
+    height: 32px;
+    background-image: url('../img/eyes_open.svg');
+}
+
+.hand {
+    width: 57px;
+    height: 89px;
+    background-image: url('../img/ok_hand.svg');
+    /* Aligns the hand to the bottom of its container */
+    align-self: flex-end;
+}
+
+.eyes,
+.hand {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 780px) {
+    .register .container {
+        /* Will stack our boxes on top of each other */
+        flex-direction: column;
+    }
+
+    .register h2 {
+        font-size: 30px;
+    }
+
+    .form {
+        margin: 24px 0;
+    }
 }

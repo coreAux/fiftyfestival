@@ -20,7 +20,7 @@ const circles = document.querySelectorAll('.circle');
 
 circles.forEach((circle, index) => {
 // In here we get access to each circle
-    circle.style.animation = 'shapemove 6s infinite linear';
+    circle.style.animation = 'shapemove 20s infinite linear';
 
 // Just to avoid infinitys add 1 to the index so no divide by zero
     index += 1;
@@ -28,6 +28,16 @@ circles.forEach((circle, index) => {
 // In seconds, divide by index number to get slight delay
     const delay = (1 / index) + 's';
     circle.style.animationDelay = delay;
+
+    // Change scale of circle on mouseover and change it back on mouseout
+    circle.addEventListener('mouseover', function(){
+        event.target.style.transition = 'transform 2s ease-out';
+        event.target.style.transform = 'scale(3)';
+    });
+    circle.addEventListener('mouseout', function(){
+        event.target.style.transition = 'transform 2s ease-in 2s';
+        event.target.style.transform = 'scale(1)';
+    });
 })
 
 // m'Squiggle

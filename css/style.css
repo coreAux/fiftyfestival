@@ -12,9 +12,15 @@ body {
     line-height: 1.5;
 }
 
-*::selection {
+*::selection, {
     background-color: #90F;
     /*mix-blend-mode: color-dodge;*/
+}
+
+*:focus {
+    outline-color: #90f;
+    border: 0px solid transparent;
+    /*background: #90f;*/
 }
 
 .section {
@@ -170,4 +176,33 @@ body {
     background-image: url('../img/down-arrow-light.svg');
 
     mix-blend-mode: color-dodge;
+}
+
+@media (max-width: 640px) {
+    .marquee {
+        /* Here we reset our marquee back to its default poisiton */
+        position: relative;
+        animation-duration: 500s;
+        top: auto;
+        left: auto;
+        margin-bottom: 24px;
+        width: 90vw;
+    }
+
+    .intro p {
+        font-size: 20px;
+    }
+
+    .logo {
+        max-width: 64px;
+        margin-bottom: 20px;
+    }
+
+    .scroll-to {
+        display: none;
+    }
+
+    .lineup h2 {
+        font-size: 30px;
+    }
 }
