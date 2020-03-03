@@ -14,13 +14,10 @@ body {
 
 *::selection {
     background-color: #90F;
-    /*mix-blend-mode: color-dodge;*/
 }
 
 *:focus {
-    outline-color: #90f;
-    border: 0px solid transparent;
-    /*background: #90f;*/
+    outline: none;
 }
 
 .section {
